@@ -1,0 +1,382 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --text-color: white;
+    --bg-color: #000;
+    --main-color: #30d5c8;
+    --text-color-2: #B6BDBD;
+    --h1-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+
+/*I want to find out how to increase the distance between the logo and the rest of the header*/
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*z-indez ensures the header remains above evrything else at all times so keep the position as fixed*/
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 27px 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+
+/*controls the whole navbar (sets base styling for this class)*/
+.navbar {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    text-shadow: 0 0 10px
+}
+
+/*controls the home, about and contact part specifically*/
+.navbar a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    margin: 15px 22px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    transition: all .50s ease;
+}
+
+/*controls the actual 1st part (kallfic's)*/
+.logo {
+    font-size: 33px;
+    color: var(--text-color);
+    font-weight: 700;
+    text-shadow: 0 0 10px;
+}
+
+/*controls the 2nd part (Corner)*/
+span {
+    color: var(--main-color);
+    filter: brightness(100%);
+}
+
+/*controls the follow me part part along with the icons*/
+.h-right {
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0 10px;
+    font-weight: 500;
+    margin: 15px 22px;
+}
+
+.h-right a:visited {
+    color: var(--text-color);
+}
+
+
+.h-right a:hover {
+    color: var(--main-color);
+    transform: translateY(-3px);
+}
+
+.h-right a {
+    margin-right: 20px;
+    vertical-align: middle;
+    transition: all .50s ease;
+    color: var(--text-color)
+}
+
+#menu-icon {
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10001;
+    /*hides the menu icon from view*/
+    display: none;
+}
+
+section {
+    padding: 70px 17% 60px;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to left, #00000099, #0000004d), url(../pcbglandscape.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all .50s ease;
+}
+
+.home-text h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-shadow: 0 0 7px;
+    line-height: 1.4;
+}
+
+.home-text h1::after {
+    content: "⭜";
+    font-size: 24px;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.home-text h1 span::after {
+    content: "No it's not the 4060";
+    font-size: 10px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 170px;
+}
+
+.home-text h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--main-color);
+    text-shadow: 0 0 10px;
+}
+
+.home-text p {
+    margin-bottom: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    color: whitesmoke;
+}
+
+/*make it glow?*/ /*also idk why but when i press any of the buttons it scrolls up the page*/
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all .50s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateX(10px);
+    border: 2px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+}
+
+header.sticky {
+    padding: 8px 17%;
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+
+.featured-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.brand-img {
+    overflow: hidden;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.brand-img img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.7s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand-img img[src="/GIGABYTE.png"]{
+    transform: scale(0.7);
+    margin-top: 40px;
+}
+
+.brand-img img:hover[src="/GIGABYTE.png"]{
+    transform: scale(0.76);
+}
+
+.brand-img img[src="/MSI.png"]{
+    transform: scale(0.7);
+    margin-top: 30px;
+}
+
+.brand-img img:hover[src="/MSI.png"]{
+    transform: scale(0.80);
+}
+
+.brand-img img[src="/ASUS-ROG.png"]{
+    transform: scale(0.65);
+    margin-top: 30px;
+}
+
+.brand-img img:hover[src="/ASUS-ROG.png"]{
+    transform: scale(0.7);
+}
+
+.brand-img img[src="/PNY.png"]{
+    transform: scale(0.85);
+    margin-top: 35px;
+}
+
+.brand-img img:hover[src="/PNY.png"]{
+    transform: scale(0.95);
+}
+
+.brand-img img[src="/ZOTAC.png"]{
+    transform: scale(3);
+    margin-top: 40px;
+}
+
+.brand-img img:hover[src="/ZOTAC.png"]{
+    transform: scale(3.4);
+}
+
+.featured-content h4 {
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .50s ease;
+}
+
+.featured-content h4:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 10px;
+}
+
+.my-build {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+}
+
+.my-build-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.my-build-text h5{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.my-build-text h2{
+    font-size: var(--h2-font);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.my-build-text p{
+    font-size: var(--p-font);
+    margin-bottom: 25px;
+    color: rgb(218, 218, 218);
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.center-text h2{
+    font-size:var(--h2-font);
+    font-weight: 800;
+}
+
+.tier-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.box{
+    position: relative;
+}
+
+.box:hover{
+    text-shadow: var(--text-color);
+    text-shadow: 0 0 10px;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    filter: brightness(70%);
+    transition: all .3s cubic-bezier(.499,.05,.55,.95);
+    will-change: filter;
+    display: block;
+}
+
+.box:hover img{
+    border: 2px solid var(--text-color);
+    transform: scale(0.95);
+    filter: brightness(40%);
+}
+
+.box h5{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    font-size: 45px;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+}
+
+
