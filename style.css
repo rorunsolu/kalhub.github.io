@@ -122,7 +122,7 @@ section {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to left, #00000099, #0000004d), url(../pcbglandscape.jpg);
+    background-image: linear-gradient(to left, #00000099, #0000004d), url(pcbglandscape.jpg);
     background-size: cover;
     background-position: bottom center;
     display: flex;
@@ -228,48 +228,48 @@ header.sticky {
     margin-right: auto;
 }
 
-.brand-img img[src="/GIGABYTE.png"]{
+.brand-img img[src="GIGABYTE.png"]{
     transform: scale(0.7);
     margin-top: 40px;
 }
 
-.brand-img img:hover[src="/GIGABYTE.png"]{
+.brand-img img:hover[src="GIGABYTE.png"]{
     transform: scale(0.76);
 }
 
-.brand-img img[src="/MSI.png"]{
+.brand-img img[src="MSI.png"]{
     transform: scale(0.7);
     margin-top: 30px;
 }
 
-.brand-img img:hover[src="/MSI.png"]{
+.brand-img img:hover[src="MSI.png"]{
     transform: scale(0.80);
 }
 
-.brand-img img[src="/ASUS-ROG.png"]{
+.brand-img img[src="ASUS-ROG.png"]{
     transform: scale(0.65);
     margin-top: 30px;
 }
 
-.brand-img img:hover[src="/ASUS-ROG.png"]{
+.brand-img img:hover[src="ASUS-ROG.png"]{
     transform: scale(0.7);
 }
 
-.brand-img img[src="/PNY.png"]{
+.brand-img img[src="PNY.png"]{
     transform: scale(0.85);
     margin-top: 35px;
 }
 
-.brand-img img:hover[src="/PNY.png"]{
+.brand-img img:hover[src="PNY.png"]{
     transform: scale(0.95);
 }
 
-.brand-img img[src="/ZOTAC.png"]{
+.brand-img img[src="ZOTAC.png"]{
     transform: scale(3);
     margin-top: 40px;
 }
 
-.brand-img img:hover[src="/ZOTAC.png"]{
+.brand-img img:hover[src="ZOTAC.png"]{
     transform: scale(3.4);
 }
 
