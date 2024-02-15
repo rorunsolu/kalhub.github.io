@@ -1,3 +1,1 @@
-This is a rough draft of the " Kallific's Hub" project.
-
-The aim of the project is to build a website that showcases variuos works of mine ranging from techology, photography and programming.
+Rough draft of the landing page of a website i'm making about Graphics Cards
